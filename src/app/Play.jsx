@@ -1161,7 +1161,15 @@ export class Play extends React.Component {
   render() {
     return (
       <div style={styles.container}>
-        <div style={styles.level}>Level : {localStorage.getItem('level')}</div>
+        <div
+          className="hoverAndMakeItBig"
+          onClick={() => {
+            window.location.href = '/level-selection';
+          }}
+          style={styles.level}
+        >
+          Level : {localStorage.getItem('level')}
+        </div>
         <div
           style={{
             fontSize:
