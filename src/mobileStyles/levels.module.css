@@ -1,0 +1,30 @@
+@media only screen and (max-width: 680px) {
+  .container {
+    margin: 3rem 0;
+  }
+
+  .grid {
+    gap: 1rem;
+  }
+
+  .levelButton {
+    width: 4rem !important;
+    height: 4rem !important;
+    margin: 0.3rem !important;
+  }
+  .levelNumber {
+    font-size: 1.2rem !important;
+  }
+}
+
+.gradientText {
+  background: #2d27e3;
+  background: radial-gradient(
+    circle farthest-corner at top left,
+    #0800fe 21%,
+    #ff0068 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
