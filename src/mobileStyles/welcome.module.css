@@ -1,0 +1,20 @@
+/* responsive styles for 640px and below */
+@media only screen and (max-width: 680px) {
+  .hoverAndMakeItBig {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+
+  .gameTitle {
+    font-size: 5rem !important;
+    text-align: center;
+    margin-top: 5rem;
+    outline: none !important;
+  }
+
+  .playButton {
+    font-size: 2rem !important;
+    width: 200px;
+    margin-top: 2rem;
+  }
+}

@@ -1,12 +1,16 @@
 import React from 'react';
 import settingIcon from '../assets/61094.png';
+import styling from '../mobileStyles/welcome.module.css';
 
 export const WelcomeScreen = () => {
   return (
     <div style={styles.container}>
-      <h1 style={styles.gameTitle}>Word Learner</h1>
+      <h1 className={`${styling.gameTitle}`} style={styles.gameTitle}>
+        Word Learner
+      </h1>
       <img
-        className="hoverAndMakeItBig"
+        alt="settings"
+        className={`hoverAndMakeItBig ${styling.hoverAndMakeItBig}`}
         onClick={() => {
           window.location.href = '/level-selection';
         }}
@@ -14,7 +18,7 @@ export const WelcomeScreen = () => {
         style={styles.settingsIcon}
       />
       <button
-        className="hoverAndMakeItBig"
+        className={`hoverAndMakeItBig ${styling.playButton}`}
         onClick={() => {
           window.location.href = '/play';
         }}
@@ -48,6 +52,7 @@ const styles = {
     position: 'absolute',
     right: '4%',
     top: '4%',
+    transition: 'all 0.5s',
   },
   playButton: {
     backgroundColor: '#333',
@@ -56,5 +61,6 @@ const styles = {
     borderRadius: '1rem',
     fontWeight: 'bold',
     fontSize: '4rem',
+    transition: 'all 0.5s',
   },
 };

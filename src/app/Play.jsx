@@ -1,5 +1,7 @@
 import React from 'react';
 import nextIcon from '../assets/next.png';
+import homeIcon from '../assets/home.svg';
+import styling from '../mobileStyles/levels.module.css';
 
 const allWordsByLevel = [
   [
@@ -1171,9 +1173,13 @@ export class Play extends React.Component {
           Level : {localStorage.getItem('level')}
         </div>
         <div
+          onClick={() => {
+            this.setNewCurrentWord();
+          }}
           style={{
             fontSize:
               wordLengthToFontSizeMap[this.state.currentWord.word.length],
+            cursor: 'pointer',
           }}
         >
           {this.state.currentWord.word}
@@ -1186,6 +1192,7 @@ export class Play extends React.Component {
           Go Back
         </button> */}
         <img
+          alt="next"
           className="hoverAndMakeItBig"
           onClick={() => {
             this.setNewCurrentWord();
@@ -1194,11 +1201,11 @@ export class Play extends React.Component {
           style={styles.nextIcon}
         />
         <img
-          className="rotate180"
+          alt="back"
           onClick={() => {
             window.location.href = '/';
           }}
-          src={nextIcon}
+          src={homeIcon}
           style={styles.backIcon}
         />
       </div>
@@ -1236,5 +1243,6 @@ const styles = {
     position: 'absolute',
     bottom: '4%',
     left: '4%',
+    cursor: 'pointer',
   },
 };
