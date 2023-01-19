@@ -1,5 +1,6 @@
 import React from 'react';
 import nextIcon from '../assets/next.png';
+import homeIcon from '../assets/home.svg';
 import styling from '../mobileStyles/levels.module.css';
 
 const allWordsByLevel = [
@@ -1172,10 +1173,13 @@ export class Play extends React.Component {
           Level : {localStorage.getItem('level')}
         </div>
         <div
-          className={`${styling.gradientText}`}
+          onClick={() => {
+            this.setNewCurrentWord();
+          }}
           style={{
             fontSize:
               wordLengthToFontSizeMap[this.state.currentWord.word.length],
+            cursor: 'pointer',
           }}
         >
           {this.state.currentWord.word}
@@ -1198,11 +1202,10 @@ export class Play extends React.Component {
         />
         <img
           alt="back"
-          className="rotate180"
           onClick={() => {
             window.location.href = '/';
           }}
-          src={nextIcon}
+          src={homeIcon}
           style={styles.backIcon}
         />
       </div>
@@ -1240,5 +1243,6 @@ const styles = {
     position: 'absolute',
     bottom: '4%',
     left: '4%',
+    cursor: 'pointer',
   },
 };
