@@ -7,6 +7,7 @@
     "build": "nx build",
     "test": "nx test"
   },
+  "homepage": "https://nsisodiya.github.io/word-learner-for-kids",
   "private": true,
   "devDependencies": {
     "@nrwl/cypress": "15.5.2",
