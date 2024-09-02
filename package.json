@@ -3,9 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "prebuild": "nx build",
     "start": "nx serve",
-    "build": "gh-pages -d build",
+    "build": "nx build",
     "test": "nx test"
   },
   "homepage": "https://nsisodiya.github.io/word-learner-for-kids",
