@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "prebuild": "nx build",
     "start": "nx serve",
-    "build": "nx build",
+    "build": "gh-pages -d build",
     "test": "nx test"
   },
   "homepage": "https://nsisodiya.github.io/word-learner-for-kids",
@@ -44,6 +45,7 @@
     "vitest": "^0.25.8"
   },
   "dependencies": {
+    "gh-pages": "^6.1.1",
     "normalize.css": "^8.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
