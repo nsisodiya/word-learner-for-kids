@@ -1,5 +1,5 @@
 import React from 'react';
-
+import styling from '../mobileStyles/levels.module.css';
 export const LevelSelection = (props) => {
   const levels = Array(50)
     .fill()
@@ -14,8 +14,8 @@ export const LevelSelection = (props) => {
   }, []);
   return (
     <div style={styles.containerParent}>
-      <div style={styles.container}>
-        <div style={styles.grid}>
+      <div className={`${styling.container}`} style={styles.container}>
+        <div className={`${styling.grid}`} style={styles.grid}>
           {splitLevels.map((row, i) => (
             <div key={i} style={styles.row}>
               {row.map((level) => (
@@ -24,11 +24,16 @@ export const LevelSelection = (props) => {
                     localStorage.setItem('level', level);
                     window.location.href = '/play';
                   }}
-                  className="hoverAndMakeItBig"
+                  className={`hoverAndMakeItBig ${styling.levelButton}`}
                   key={level}
                   style={styles.levelButton}
                 >
-                  <span style={styles.levelNumber}>{level}</span>
+                  <span
+                    className={`${styling.levelNumber}`}
+                    style={styles.levelNumber}
+                  >
+                    {level}
+                  </span>
                 </button>
               ))}
             </div>
@@ -48,6 +53,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    height: 'auto',
   },
   grid: {
     display: 'flex',
@@ -57,11 +63,11 @@ const styles = {
     display: 'flex',
   },
   levelButton: {
+    width: '6rem',
+    height: '6rem',
     margin: '1rem',
     backgroundColor: 'white',
     borderRadius: '50%',
-    width: '6rem',
-    height: '6rem',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
